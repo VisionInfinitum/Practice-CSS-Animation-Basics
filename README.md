@@ -1,1 +1,1 @@
-# Practice-CSS-Animation-Basics
+# CSS-Animation-Basics

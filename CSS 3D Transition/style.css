@@ -1,0 +1,53 @@
+h1 {
+    margin-left: 40px;
+}
+
+.box{
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    margin: 50px 80px;
+    border: 1px solid black;
+    position: relative;
+    /*We must always have a prespective to transform and translate in 3d
+    and must be applied to the parent element*/
+    perspective: 600px;
+}
+
+.box div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*To apply 3d transformation to the child elements use transform-style: preserve-3d*/
+    transform-style: preserve-3d;
+    transition: transform 2s;
+}
+
+.rotate3d {
+    background: hsla(240,70%,50%,0.6);
+}
+
+.transform3d {
+    background: hsla(120,70%,50%,0.6);
+}
+
+.scale3d {
+    background: hsla(320,70%,50%,0.6);
+}
+
+/* 3D transformation and animation*/
+
+.rotate3d:hover {
+    /*transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);*/
+    transform: rotate3d(1,1,1,360deg);
+}
+
+.transform3d:hover {
+    /*Moving towards user*/
+    transform: translateX(40px) translateY(40px) translateZ(150px);
+    /* transform: translate3d(40px 40px 150px); */
+}
+
+.scale3d:hover {
+transform: scale3d(1.5, 1.5, 1.5);
+}
